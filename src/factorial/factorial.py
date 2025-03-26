@@ -23,8 +23,14 @@ if len(sys.argv) == 0:
 
 if "-" in sys.argv[1]:
     desde, hasta = sys.argv[1].split("-")
-    desde = int(desde)
-    hasta = int(hasta)
+    if desde == "":
+        desde = 1
+    else:
+        desde = int(desde)
+    if hasta == "":
+        hasta = 60
+    else:
+        hasta = int(hasta)
 else:
     desde = 1
     hasta = int(sys.argv[1])
