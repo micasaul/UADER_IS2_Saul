@@ -25,4 +25,3 @@ if len(sys.argv) == 0:
    sys.exit()
 num=int(sys.argv[1])
 print("Factorial ",num,"! es ", factorial(num)) 
-
