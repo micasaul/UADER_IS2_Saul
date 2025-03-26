@@ -18,7 +18,7 @@ def factorial(desde, hasta):
             hasta -= 1
         return fact 
 
-if len(sys.argv) == 0:
+if len(sys.argv) == 0 or not "-" in sys.argv[1]:
    #mensaje de error si no se informa un numero
    print("Debe informar un número!")
    sys.exit()
