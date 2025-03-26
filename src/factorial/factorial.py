@@ -7,7 +7,8 @@
 #*-------------------------------------------------------------------------*
 import sys
 def factorial(desde, hasta): 
-    if desde < 0: 
+    #funcion que calcula el factorial
+    if desde <= 0: 
         print("Factorial de un número negativo no existe")
         return 0
     else: 
@@ -18,16 +19,20 @@ def factorial(desde, hasta):
         return fact 
 
 if len(sys.argv) == 0:
+   #mensaje de error si no se informa un numero
    print("Debe informar un número!")
    sys.exit()
 
 if "-" in sys.argv[1]:
+    #divide el rango
     desde, hasta = sys.argv[1].split("-")
     if desde == "":
+        #agrega limite inferior si no existe
         desde = 1
     else:
         desde = int(desde)
     if hasta == "":
+        #agrega limite superior si no existe
         hasta = 60
     else:
         hasta = int(hasta)
