@@ -6,22 +6,27 @@
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
 import sys
-def factorial(num): 
-    if num < 0: 
+def factorial(desde, hasta): 
+    if desde < 0: 
         print("Factorial de un número negativo no existe")
         return 0
-    elif num == 0: 
-        return 1
-        
     else: 
         fact = 1
-        while(num > 1): 
-            fact *= num 
-            num -= 1
+        while(hasta >= desde): 
+            fact *= hasta 
+            hasta -= 1
         return fact 
 
 if len(sys.argv) == 0:
    print("Debe informar un número!")
    sys.exit()
-num=int(sys.argv[1])
-print("Factorial ",num,"! es ", factorial(num)) 
+
+if "-" in sys.argv[1]:
+    desde, hasta = sys.argv[1].split("-")
+    desde = int(desde)
+    hasta = int(hasta)
+else:
+    desde = 1
+    hasta = int(sys.argv[1])
+
+print("Factorial ",desde, "-", hasta,"! es ", factorial(desde, hasta)) 
