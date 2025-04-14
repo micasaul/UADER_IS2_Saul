@@ -1,6 +1,5 @@
-{
-  "files": 
-      "comment_ratio": 5.885,
+{ 
+ "comment_ratio": 31.309,
       "cyclomatic_complexity": 4,
       "fanout_external": 4,
       "fanout_internal": 0,
@@ -12,8 +11,8 @@
       "lang": [
         "Python"
       ],
-      "loc": 58,
-      "maintainability_index": 66.276,
+      "loc": 74,
+      "maintainability_index": 62.329,
       "operands_sum": 139,
       "operands_uniq": 53,
       "operators_sum": 109,
@@ -29,9 +28,9 @@
       "tiobe_security": 100.0,
       "tiobe_standard": 100.0
     
-,
+},
   "overall": {
-    "comment_ratio": 5.885,
+    "comment_ratio": 31.309,
     "cyclomatic_complexity": 4,
     "fanout_external": 4,
     "fanout_internal": 0,
@@ -40,8 +39,8 @@
     "halstead_effort": 25553.874,
     "halstead_timerequired": 1419.66,
     "halstead_volume": 1499.01,
-    "loc": 58,
-    "maintainability_index": 66.276,
+    "loc": 74,
+    "maintainability_index": 62.329,
     "operands_sum": 139,
     "operands_uniq": 53,
     "operators_sum": 109,
@@ -59,7 +58,7 @@
   },
   "stats": {
     "max": {
-      "comment_ratio": 5.885,
+      "comment_ratio": 31.309,
       "cyclomatic_complexity": 4,
       "fanout_external": 4,
       "fanout_internal": 0,
@@ -68,8 +67,8 @@
       "halstead_effort": 25553.874,
       "halstead_timerequired": 1419.66,
       "halstead_volume": 1499.01,
-      "loc": 58,
-      "maintainability_index": 66.276,
+      "loc": 74,
+      "maintainability_index": 62.329,
       "operands_sum": 139,
       "operands_uniq": 53,
       "operators_sum": 109,
@@ -86,7 +85,7 @@
       "tiobe_standard": 100.0
     },
     "mean": {
-      "comment_ratio": 5.885,
+      "comment_ratio": 31.309,
       "cyclomatic_complexity": 4,
       "fanout_external": 4,
       "fanout_internal": 0,
@@ -95,8 +94,8 @@
       "halstead_effort": 25553.874,
       "halstead_timerequired": 1419.66,
       "halstead_volume": 1499.01,
-      "loc": 58,
-      "maintainability_index": 66.276,
+      "loc": 74,
+      "maintainability_index": 62.329,
       "operands_sum": 139,
       "operands_uniq": 53,
       "operators_sum": 109,
@@ -113,7 +112,7 @@
       "tiobe_standard": 100.0
     },
     "median": {
-      "comment_ratio": 5.885,
+      "comment_ratio": 31.309,
       "cyclomatic_complexity": 4,
       "fanout_external": 4,
       "fanout_internal": 0,
@@ -122,8 +121,8 @@
       "halstead_effort": 25553.874,
       "halstead_timerequired": 1419.66,
       "halstead_volume": 1499.01,
-      "loc": 58,
-      "maintainability_index": 66.276,
+      "loc": 74,
+      "maintainability_index": 62.329,
       "operands_sum": 139,
       "operands_uniq": 53,
       "operators_sum": 109,
@@ -140,7 +139,7 @@
       "tiobe_standard": 100.0
     },
     "min": {
-      "comment_ratio": 5.885,
+      "comment_ratio": 31.309,
       "cyclomatic_complexity": 4,
       "fanout_external": 4,
       "fanout_internal": 0,
@@ -149,8 +148,8 @@
       "halstead_effort": 25553.874,
       "halstead_timerequired": 1419.66,
       "halstead_volume": 1499.01,
-      "loc": 58,
-      "maintainability_index": 66.276,
+      "loc": 74,
+      "maintainability_index": 62.329,
       "operands_sum": 139,
       "operands_uniq": 53,
       "operators_sum": 109,
@@ -167,4 +166,3 @@
       "tiobe_standard": 100.0
     }
   }
-}
