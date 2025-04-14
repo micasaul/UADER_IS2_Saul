@@ -1,6 +1,7 @@
+"""Programa para chatGPT"""
+import os
 from openai import OpenAI
 from dotenv import load_dotenv
-import os
 import keyboard
 
 load_dotenv()
@@ -16,7 +17,7 @@ queries = []
 
 # Nido para aceptación de consulta del usuario
 try:
-    print("Presiona ↑ para editar tu consulta anterior o presiona enter para escribir una consulta nueva")
+    print("↑ para editar consulta anterior o enter para consulta nueva")
 
     # Espera que el usuario pressione una tecla
     while True:
@@ -28,53 +29,52 @@ try:
                 # Permite editarla o reenviarla
                 userquery = input("You: ")
                 break
-            else:
                 # Informa que no hay historial previo
-                print("No hay consultas previas")
-                userquery= input("You: ")
-                break
+            print("No hay consultas previas")
+            userquery= input("You: ")
+            break
         # Opcion para crear una consulta nueva
-        elif keyboard.is_pressed("enter"):
+        if keyboard.is_pressed("enter"):
             userquery = input("You: ")
             break
-    
+
     # Nido para el tratamiento
     try:
         # Define un contexto para el sistema
-        context = "Eres una herramienta que responde siempre con un objeto JSON válido."
+        CONTEXT = "Eres una herramienta que responde siempre con un objeto JSON válido."
 
         # Nido para la invocación
         try:
             # Se realiza la llamada al modelo con la consulta del usuario y el contexto
-            response = client.chat.completions.create( 
+            response = client.chat.completions.create(
                 model="gpt-4o-mini-2024-07-18", # Modelo utilizado
                 response_format={ "type": "json_object" }, # Formato de respuesta
-                messages=[ 
-                    { 
+                messages=[
+                    {
                     "role": "system", 
-                    "content": context }, # Contexto del sistema
-                    { 
+                    "content": CONTEXT }, # Contexto del sistema
+                    {
                     "role": "user", 
                     "content": userquery } # Consulta del usuario
-                ], 
-                temperature=1, 
+                ],
+                temperature=1,
                 max_tokens=100, # Limite de tokens por respuesta
-                top_p=1, 
-                frequency_penalty=0, 
-                presence_penalty=0 
-            ) 
+                top_p=1,
+                frequency_penalty=0,
+                presence_penalty=0
+            )
 
             # Extrae la respuesta en formato texto
-            jsonStr=response.choices[0].message.content 
+            jsonStr=response.choices[0].message.content
 
             # Guarda la consulta en el historial
             queries.append(userquery)
             print(f"ChatGPT: {jsonStr}")
-        
+
         # Captura errores en la invocación
         except Exception as e:
             print(f"Ocurrio un error: {e}")
-    
+
     # Captura errores en el tratamiento
     except Exception as e:
         print(f"Ocurrió un error: {e}")
