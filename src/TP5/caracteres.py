@@ -1,5 +1,3 @@
-#Implemente una clase bajo el patrón iterator que almacene una cadena de 
-#caracteres y permita recorrerla en sentido directo y reverso. 
 from __future__ import annotations
 from collections.abc import Iterable, Iterator
 from typing import Any, List
