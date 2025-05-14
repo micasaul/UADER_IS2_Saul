@@ -20,7 +20,6 @@ class OrderIterator(Iterator):
 
         return value
 
-
 class WordsCollection(Iterable):
     def __init__(self, collection: List[Any] = []) -> None:
         self._collection = collection
