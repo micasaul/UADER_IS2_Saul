@@ -1,5 +1,3 @@
-#Implemente una clase bajo el patrón iterator que almacene una cadena de 
-#caracteres y permita recorrerla en sentido directo y reverso. 
 from __future__ import annotations
 from collections.abc import Iterable, Iterator
 from typing import Any, List
@@ -21,7 +19,6 @@ class OrderIterator(Iterator):
             raise StopIteration()
 
         return value
-
 
 class WordsCollection(Iterable):
     def __init__(self, collection: List[Any] = []) -> None:
