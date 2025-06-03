@@ -1,0 +1,10 @@
+{
+    "token1": {
+        "clave": "C598-ECF9-F0F7-881A",
+        "saldo": 1000
+    },
+    "token2": {
+        "clave": "C598-ECF9-F0F7-881B",
+        "saldo": 2000
+    }
+}
